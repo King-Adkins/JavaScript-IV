@@ -1,4 +1,5 @@
 // CODE here for your Lambda Classes
+
 class Person {
     constructor(baseClass) {
         this.name = baseClass.name;
@@ -6,7 +7,6 @@ class Person {
         this.location = baseClass.location;
         this.gender = baseClass.gender;
     }
-
     speak() {
         return `Hello my name is ${this.name}, I am from ${this.location}.`;
     }
@@ -30,7 +30,7 @@ class Instructor extends Person {
 }
 
 
-class student extends Person {
+class Student extends Person {
     constructor(studentOptions) {
         super(studentOptions)
         this.previousBackground = studentOptions.previousBackground;
@@ -67,3 +67,94 @@ class PMs extends Instructor {
     }
 }
 
+//Instructors
+const Mike = new Instructor({
+    name: 'Mike',
+    age: '37',
+    location: 'Milwaukee',
+    gender: 'M',
+    specialty: 'Front-end',
+    favLanguage: 'JavaScript',
+    catchPhrase: `Don't get me wrong`
+})
+
+const David = new Instructor({
+    name: 'David',
+    age: '32',
+    location: 'Las Vegas',
+    gender: 'M',
+    specialty: 'Back-end',
+    favLanguage: 'React',
+    catchPhrase: `Don't forget the homis.`
+})
+
+const Mary = new Instructor({
+    name: 'Mary',
+    age: '45',
+    location: 'New York',
+    gender: 'F',
+    specialty: 'UI Design',
+    favLanguage: 'Java',
+    catchPhrase: `If you are on time then you are already late.`
+})
+
+
+//PMs
+const Shay = new PMs({
+    name: 'Shay',
+    age: '26',
+    location: 'Chicago',
+    gender: 'F',
+    gradClassName: 'Web19',
+    favInstructor: 'Josh Knell'
+})
+
+const Steve = new PMs({
+    name: 'Steve',
+    age: '29',
+    location: 'Miami',
+    gender: 'M',
+    gradClassName: 'Web16',
+    favInstructor: 'Josh Knell'
+})
+
+const Chino = new PMs({
+    name: 'Chino',
+    age: '34',
+    location: 'St Louis',
+    gender: 'M',
+    gradClassName: 'Web12',
+    favInstructor: 'Josh Knell'
+})
+
+
+//Students
+const Maegan = new Student({
+    name: 'Maegan',
+    age: '30',
+    location: 'Atlanta',
+    gender: 'F',
+    previousBackground: 'Beginner',
+    className: 'Fullstack Web Dev.',
+    favSubjects: 'Math, code, and JS.'
+})
+
+const Elle = new Student({
+    name: 'Elle',
+    age: '19',
+    location: 'Reno',
+    gender: 'F',
+    previousBackground: 'Intermediate',
+    className: 'Data Science',
+    favSubjects: 'Math, React, and JS.'
+})
+
+const Andrew = new Student({
+    name: 'Andrew',
+    age: '38',
+    location: 'Dallas',
+    gender: 'M',
+    previousBackground: 'Beginner',
+    className: 'UI/UX.',
+    favSubjects: 'Design, code, and python.'
+})
